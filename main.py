@@ -12,6 +12,7 @@ from visualization.visualizer import SimulationVisualizer
                                                                                                                                                                                                                                                                                            
 """
 
+
 if __name__ == "__main__":
     # Simulation setup
     env = simpy.Environment()

@@ -4,11 +4,11 @@ from utils.ieee_802_11 import IeeeStandard
 IEEE_802_11 = IeeeStandard().b_802_11
 
 # --------------------- simulation parameters --------------------- #
-MAP_LENGTH = 600  # m, length of the map
-MAP_WIDTH = 600  # m, width of the map
-MAP_HEIGHT = 100  # m, height of the map
-SIM_TIME = 30 * 1e6  # us, total simulation time
-NUMBER_OF_DRONES = 10  # number of drones in the network
+MAP_LENGTH = 500  # m, length of the map
+MAP_WIDTH = 500  # m, width of the map
+MAP_HEIGHT = 200  # m, height of the map
+SIM_TIME = 10 * 1e6  # us, total simulation time
+NUMBER_OF_DRONES = 5  # number of drones in the network
 GRID_RESOLUTION = 20  # grid the map for path planning
 STATIC_CASE = 0  # whether to simulate a static network
 HETEROGENEOUS = 0  # heterogeneous network support (in terms of speed)
