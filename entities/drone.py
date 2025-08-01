@@ -135,7 +135,7 @@ class Drone:
                     yield self.env.timeout(self.rng_drone.randint(500000, 505000))
                 elif traffic_pattern == 'Poisson':
                     """
-                    The process of generating data packets by nodes follows Poisson distribution, thus the generation 
+                    The process of generating data packets by nodes follows Poisson distribution, thus the generation
                     interval of data packets follows exponential distribution
                     """
 
@@ -447,3 +447,17 @@ class Drone:
                 pass
 
         return flag, all_drones_send_to_me, time_span, potential_packet
+
+    def get_energy_status(self):
+        """
+        Get current energy status of the drone
+
+        Returns:
+            dict: Energy status information
+        """
+        return {
+            'residual_energy': self.residual_energy,
+            'battery_capacity': config.INITIAL_ENERGY,
+            'energy_percentage': (self.residual_energy / config.INITIAL_ENERGY) * 100,
+            'sleep': self.sleep
+        }

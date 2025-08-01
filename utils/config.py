@@ -7,8 +7,10 @@ IEEE_802_11 = IeeeStandard().b_802_11
 MAP_LENGTH = 500  # m, length of the map
 MAP_WIDTH = 500  # m, width of the map
 MAP_HEIGHT = 200  # m, height of the map
-SIM_TIME = 10 * 1e6  # us, total simulation time
+SIM_TIME = 100 * 1e6  # us, total simulation time
 NUMBER_OF_DRONES = 5  # number of drones in the network
+NUMBER_OF_IOT_NODES = 20  # number of IoT nodes in the network
+IOT_NODE_DENSITY = 0.00008  # IoT nodes per square meter
 GRID_RESOLUTION = 20  # grid the map for path planning
 STATIC_CASE = 0  # whether to simulate a static network
 HETEROGENEOUS = 0  # heterogeneous network support (in terms of speed)
@@ -29,6 +31,16 @@ FUSELAGE_DRAG_RATIO = 0.3
 INITIAL_ENERGY = 20 * 1e3  # in joule
 ENERGY_THRESHOLD = 2000  # in joule
 MAX_QUEUE_SIZE = 200  # maximum size of drone's queue
+
+# ---------- hardware parameters of IoT nodes -----------#
+IOT_NODE_BATTERY_CAPACITY = 5000  # in joule
+IOT_NODE_ENERGY_THRESHOLD = 500  # in joule
+IOT_NODE_MAX_BUFFER_SIZE = 50  # maximum number of packets in IoT node buffer
+IOT_NODE_DATA_GENERATION_RATE = 2.0  # packets per second
+IOT_NODE_PACKET_SIZE = 1024 * 8  # in bits, 1024 bytes
+IOT_NODE_SENSING_ENERGY = 0.05  # joule per sensing operation
+IOT_NODE_TRANSMISSION_ENERGY = 0.2  # joule per packet transmission
+IOT_NODE_IDLE_ENERGY = 0.01  # joule per second when idle
 
 # ----------------------- radio parameters ----------------------- #
 TRANSMITTING_POWER = 0.1  # in Watt

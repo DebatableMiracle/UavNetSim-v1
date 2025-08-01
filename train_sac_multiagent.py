@@ -93,7 +93,7 @@ class MASACAgent:
 
 # ===== Utils =====
 def get_state(env, uav_idx):
-    uav_pos = env.uav_pos[uav_idx]
+    uav_pos = env.uav_pos[updrav_idx]
     uav_energy = env.uav_energy[uav_idx]
     dists = np.linalg.norm(env.node_pos - uav_pos, axis=1)
     nearest = np.argmin(dists)

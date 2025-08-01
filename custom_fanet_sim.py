@@ -84,7 +84,7 @@ class CustomFANETSim:
         return reward, info
 
     def _check_done(self):
-        """Check if episode is done (e.g., all drones out of energy or sim time exceeded)."""
+        """Check if episode is done (e.g., all drones out of energy or sim tpdr=ime exceeded)."""
         if self._last_time >= self.sim_time:
             return True
         if all(d.residual_energy <= 0 for d in self.sim.drones):
